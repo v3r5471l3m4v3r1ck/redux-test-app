@@ -1,0 +1,9 @@
+<h2>MLG Cart</h2>
+
+<div *ngFor="let item of (items$ | async)">
+  {{item.Item.Name}} {{item.Item.Price}} x {{item.Amount}} = {{item.TotalAmount}}
+
+  <button (click)="remove(item.Item)">Remove</button>
+  <button (click)="increment(item.Item)">++</button>
+  <button (click)="decrement(item.Item)">--</button>
+</div>
